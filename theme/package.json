@@ -1,9 +1,9 @@
 {
-  "name": "@divramod/gatsby-theme-divramod",
+  "name": "@divramod/gatsby-theme-ts-mdx",
   "author": "Arvid Petermann <divramod@gmail.com> (@divramod)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/divramod/gatsby-theme.git"
+    "url": "https://github.com/divramod/gatsby-theme-ts-mdx.git"
   },
   "version": "0.0.1",
   "main": "index.ts",

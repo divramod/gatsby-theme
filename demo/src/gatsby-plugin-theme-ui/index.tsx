@@ -1,4 +1,4 @@
-import { themeCandor } from "@shetharp/gatsby-theme-candor";
+import { themeCandor } from "@divramod/gatsby-theme-divramod";
 
 export const themeSite = {
   ...themeCandor,
