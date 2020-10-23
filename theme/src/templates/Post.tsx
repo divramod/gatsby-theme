@@ -1,7 +1,7 @@
-import React from "react";
+import React                                  from "react";
 import { graphql, useStaticQuery, PageProps } from "gatsby";
-import Layout from "../components/Layout";
-import { Badge, Text } from "theme-ui";
+import Layout                                 from "../components/Layout";
+import { Badge, Text }                        from "theme-ui";
 
 export type PostProps = PageProps & {
   pageContext: {

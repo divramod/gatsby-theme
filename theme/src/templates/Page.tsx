@@ -1,8 +1,8 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
-import PropTypes from "prop-types";
-import Layout from "../components/Layout";
-import { Badge, Text } from "theme-ui";
+import React                        from "react";
+import { graphql, useStaticQuery }  from "gatsby";
+import PropTypes                    from "prop-types";
+import Layout                       from "../components/Layout";
+import { Badge, Text }              from "theme-ui";
 
 export type PageTemplateProps = {
   // empty

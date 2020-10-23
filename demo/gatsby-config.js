@@ -1,7 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Theme Typescript mdx",
+    title: "demo",
     description: `Gatsby theme divramod demo site. Built by Arvid Petermann (@divramod)`,
+    links: [
+      { label: 'cv', path: '/cv'},
+      { label: 'blog', path: '/blog'},
+    ]
   },
   pathPrefix: "/gatsby-theme-ts-mdx",
   plugins: [

@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import React from "react";
-import { graphql, useStaticQuery, Link } from "gatsby";
-import { jsx, Box, Container } from "theme-ui";
+import React                              from "react";
+import { graphql, useStaticQuery, Link }  from "gatsby";
+import { jsx, Box, Container }            from "theme-ui";
 
 export type HeaderProps = {
   // empty
@@ -13,20 +13,25 @@ export const Header: React.FC<HeaderProps> = (props) => {
       site {
         siteMetadata {
           title
+          description
+          links {
+            label
+            path
+          }
         }
       }
     }
   `);
 
+  const links = data.site.siteMetadata.links.map((link: any) =>
+      `<a key="${link.label}" href="${link.path}">${link.label}</a>`
+  ).join(' | ')
+
   return (
     <header>
       <Box bg="primary" color="background" paddingY={2}>
         <Container>
-          <h1 sx={{ margin: 0, fontSize: 4 }}>
-            <Link to="/" sx={{ color: "inherit" }}>
-              {data.site.siteMetadata.title}
-            </Link>
-          </h1>
+          <div dangerouslySetInnerHTML={ { __html: `<a key="title" href="/">${data.site.siteMetadata.title}</a> ${links}` }}></div>
         </Container>
       </Box>
     </header>

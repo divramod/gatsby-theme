@@ -6,6 +6,7 @@ function GatsbyConfig(options) {
   const { syntaxHighlight = true } = options;
   return {
     plugins: [
+      `gatsby-plugin-react-helmet`,
       {
         resolve: "gatsby-source-filesystem",
         options: {
@@ -30,20 +31,35 @@ function GatsbyConfig(options) {
         resolve: "gatsby-plugin-mdx",
         options: {
           extensions: [".mdx", ".md"],
-          remarkPlugins: [require("remark-slug"), require("remark-emoji")],
+          remarkPlugins: [
+            require("remark-slug"),
+            require("remark-emoji"),
+          ],
           defaultLayouts: {
             default: require.resolve("./src/templates/Page.tsx"),
             posts: require.resolve("./src/templates/Post.tsx"),
           },
           gatsbyRemarkPlugins: [
+            `gatsby-remark-graphviz`,
+            `gatsby-remark-embed-video`,
             {
-              resolve: "gatsby-remark-images",
+              resolve: `gatsby-remark-images`,
               options: {
-                maxWidth: 800,
+                maxWidth: 786,
+                backgroundColor: `#ffffff`,
               },
             },
-            syntaxHighlight && "gatsby-remark-prismjs",
-          ].filter(Boolean),
+            {
+              resolve: `gatsby-remark-responsive-iframe`,
+              options: {
+                wrapperStyle: `margin-bottom: 1.5rem`,
+              },
+            },
+            `gatsby-remark-autolink-headers`,
+            `gatsby-remark-copy-linked-files`,
+            `gatsby-remark-smartypants`,
+            "gatsby-remark-prismjs",
+          ],
         },
       },
       "gatsby-plugin-theme-ui",

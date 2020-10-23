@@ -1,0 +1,31 @@
+---
+title: ava
+author: Arvid Petermann
+date: 2020-10-01
+excerpt: Beleive it till you become it 🦚
+---
+
+import { Video } from "@divramod/gatsby-theme-ts-mdx"
+
+```javascript:title=some.spec.ts
+test('harborScanStart()', async t => {
+  const dockerR = 'some/repo'
+  const tagName = 'latest'
+  const scanRes = await harborScanStart(dockerR, tagName)
+  t.is(scanRes.status, 202)
+})
+
+test('harborScanGet()', async t => {
+  const dockerR = 'some/repo'
+  const tagName = 'latest'
+  const scanRes = await some(dockerR, tagName)
+  t.is(scanRes.status, 200)
+})
+```
+
+## hello
+<Video
+  key='video'
+  videoSrcURL="https://www.youtube.com/embed/dQw4w9WgXcQ"
+  videoTitle="Official Music Video on YouTube"
+/>

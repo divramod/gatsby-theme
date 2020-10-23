@@ -1,2 +1,4 @@
-// TODO: how to config this from the theme?
+import { wrapRootElement as wrap } from './wrap'
 require("./src/prismjs/themes/prism-vs-code-dark.css");
+
+export const wrapRootElement = wrap
