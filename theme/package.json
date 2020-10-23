@@ -3,7 +3,7 @@
   "author": "Arvid Petermann <divramod@gmail.com> (@divramod)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/divramod/gatsby-theme-ts-mdx.git"
+    "url": "git+https://github.com/divramod/gatsby-theme-ts-mdx.git"
   },
   "version": "0.0.1",
   "main": "index.ts",
@@ -44,5 +44,13 @@
     "typescript",
     "mdx",
     "theme-ui"
-  ]
+  ],
+  "description": "Gatsby Theme Candor is a simple and honest theme that will help you set up a production-grade website in no time.",
+  "bugs": {
+    "url": "https://github.com/divramod/gatsby-theme-ts-mdx/issues"
+  },
+  "homepage": "https://github.com/divramod/gatsby-theme-ts-mdx#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
