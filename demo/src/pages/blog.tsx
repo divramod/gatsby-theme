@@ -1,6 +1,6 @@
 import React from "react";
 import { PageProps, Link, graphql } from "gatsby";
-import { Layout } from "@divramod/gatsby-theme-divramod";
+import { Layout } from "@divramod/gatsby-theme-ts-mdx";
 import { Styled } from "theme-ui";
 
 type BlogIndexProps = PageProps & {

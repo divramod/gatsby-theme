@@ -1,4 +1,4 @@
-import { themeCandor } from "@divramod/gatsby-theme-divramod";
+import { themeCandor } from "@divramod/gatsby-theme-ts-mdx";
 
 export const themeSite = {
   ...themeCandor,

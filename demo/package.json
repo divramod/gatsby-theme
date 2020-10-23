@@ -13,7 +13,7 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
-    "@divramod/gatsby-theme-divramod": "*",
+    "@divramod/gatsby-theme-ts-mdx": "*",
     "gatsby": "^2.23.20",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"

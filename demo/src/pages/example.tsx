@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { PageProps } from "gatsby";
-import { Layout } from "@divramod/gatsby-theme-divramod";
+import { Layout } from "@divramod/gatsby-theme-ts-mdx";
 
 const TypescriptExamplePage: React.FC<PageProps> = (props) => {
   return (
