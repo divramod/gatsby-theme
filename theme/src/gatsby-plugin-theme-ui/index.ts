@@ -4,7 +4,7 @@ import { SystemStyleObject } from "@styled-system/css";
 // ==================================================
 // Theme type
 // ==================================================
-export type ThemeCandor = Theme & {
+export type ThemeBase = Theme & {
   styles: Theme["styles"] & { del: SystemStyleObject };
   opacities: { [k: string]: string };
   transitions: { [k: string]: string };
@@ -25,7 +25,7 @@ const breakpointsDict = {
   laptopL: "1600px", // breakpoints[8]
 };
 
-const breakpoints: ThemeCandor["breakpoints"] = Object.values(breakpointsDict);
+const breakpoints: ThemeBase["breakpoints"] = Object.values(breakpointsDict);
 
 // ==================================================
 // Theme scale > Colors
@@ -48,7 +48,7 @@ const palette = {
   properBlue: "#102341",
 };
 
-const colors: ThemeCandor["colors"] = {
+const colors: ThemeBase["colors"] = {
   ...palette,
   text: palette.neutral[4],
   background: palette.neutral[0],
@@ -62,24 +62,24 @@ const colors: ThemeCandor["colors"] = {
 // ==================================================
 // Theme scale > Typography
 // ==================================================
-const fonts: ThemeCandor["fonts"] = {
+const fonts: ThemeBase["fonts"] = {
   body:
     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
   heading: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
   monospace: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
 };
 
-const fontSizes: ThemeCandor["fontSizes"] = [16, 18, 20, 24, 28, 32, 40, 48, 60, 72];
+const fontSizes: ThemeBase["fontSizes"] = [16, 18, 20, 24, 28, 32, 40, 48, 60, 72];
 
-const fontWeights: ThemeCandor["fontWeights"] = {
+const fontWeights: ThemeBase["fontWeights"] = {
   body: 300,
   heading: 700,
   bold: 500,
 };
 
-const letterSpacings: ThemeCandor["letterSpacings"] = {};
+const letterSpacings: ThemeBase["letterSpacings"] = {};
 
-const lineHeights: ThemeCandor["lineHeights"] = {
+const lineHeights: ThemeBase["lineHeights"] = {
   body: 1.667,
   heading: 1.125,
 };
@@ -102,9 +102,9 @@ const spaceDict = {
   "256": "256px",
 };
 
-const space: ThemeCandor["space"] = Object.values(spaceDict);
+const space: ThemeBase["space"] = Object.values(spaceDict);
 
-const sizes: ThemeCandor["sizes"] = {
+const sizes: ThemeBase["sizes"] = {
   ...spaceDict,
   ...breakpointsDict,
   full: "100%",
@@ -112,14 +112,14 @@ const sizes: ThemeCandor["sizes"] = {
   screenWidth: "100vw",
 };
 
-const zIndices: ThemeCandor["zIndices"] = {};
+const zIndices: ThemeBase["zIndices"] = {};
 
 // ==================================================
 // Theme scale > Borders
 // ==================================================
-const borders: ThemeCandor["borders"] = {};
+const borders: ThemeBase["borders"] = {};
 
-const borderWidths: ThemeCandor["borderWidths"] = {
+const borderWidths: ThemeBase["borderWidths"] = {
   "0": "0",
   none: "0",
   sm: "2px",
@@ -127,9 +127,9 @@ const borderWidths: ThemeCandor["borderWidths"] = {
   lg: "8px",
 };
 
-const borderStyles: ThemeCandor["borderStyles"] = {};
+const borderStyles: ThemeBase["borderStyles"] = {};
 
-const radii: ThemeCandor["radii"] = {
+const radii: ThemeBase["radii"] = {
   "0": "0",
   none: "0",
   default: "4px",
@@ -139,7 +139,7 @@ const radii: ThemeCandor["radii"] = {
 // ==================================================
 // Theme scale > Opacities + Shadows
 // ==================================================
-const opacities: ThemeCandor["opacities"] = {
+const opacities: ThemeBase["opacities"] = {
   "0": "0",
   none: "0",
   low: "0.2",
@@ -148,12 +148,12 @@ const opacities: ThemeCandor["opacities"] = {
   full: "1",
 };
 
-const shadows: ThemeCandor["shadows"] = {};
+const shadows: ThemeBase["shadows"] = {};
 
 // ==================================================
 // Transitions
 // ==================================================
-const transitions: ThemeCandor["transitions"] = {
+const transitions: ThemeBase["transitions"] = {
   default: "all 200ms ease",
   fast: "all 100ms ease",
 };
@@ -186,7 +186,7 @@ const baseHeading = {
 // ==================================================
 // Theme styles
 // ==================================================
-const styles: ThemeCandor["styles"] = {
+const styles: ThemeBase["styles"] = {
   root: {
     fontSize: [0, null, 1, null, 2],
     fontFamily: "body",
@@ -268,7 +268,7 @@ const styles: ThemeCandor["styles"] = {
 // ==================================================
 // Theme component variants
 // ==================================================
-const layout: ThemeCandor["layout"] = {
+const layout: ThemeBase["layout"] = {
   container: {
     // borderWidth: "md",
     // borderStyle: ["solid", "solid", "dashed", "dotted", "solid", "dashed", "dotted", "solid", "dashed", "dotted"],
@@ -290,7 +290,7 @@ const baseButton = {
   },
 };
 
-const buttons: ThemeCandor["buttons"] = {
+const buttons: ThemeBase["buttons"] = {
   primary: {
     ...baseButton,
     backgroundColor: "primary",
@@ -301,7 +301,7 @@ const buttons: ThemeCandor["buttons"] = {
   },
 };
 
-const text: ThemeCandor["text"] = {
+const text: ThemeBase["text"] = {
   default: { display: "inline" },
   mono: { display: "inline", fontFamily: "monospace" },
   heading: {
@@ -317,7 +317,7 @@ const text: ThemeCandor["text"] = {
   },
 };
 
-const cards: ThemeCandor["cards"] = {
+const cards: ThemeBase["cards"] = {
   primary: {
     borderWidth: "sm",
     borderStyle: "solid",
@@ -327,9 +327,9 @@ const cards: ThemeCandor["cards"] = {
   },
 };
 
-const forms: ThemeCandor["forms"] = {};
+const forms: ThemeBase["forms"] = {};
 
-const badges: ThemeCandor["badges"] = {
+const badges: ThemeBase["badges"] = {
   primary: {
     backgroundColor: "primary",
   },
@@ -344,7 +344,7 @@ const badges: ThemeCandor["badges"] = {
   },
 };
 
-const alerts: ThemeCandor["alerts"] = {
+const alerts: ThemeBase["alerts"] = {
   primary: {
     backgroundColor: "primary",
     color: "white",
@@ -363,14 +363,14 @@ const alerts: ThemeCandor["alerts"] = {
   },
 };
 
-const messages: ThemeCandor["messages"] = {};
+const messages: ThemeBase["messages"] = {};
 
 // ==================================================
 // THEME OBJECT
 // Candor theme
 // https://theme-ui.com/theme-spec
 // ==================================================
-export const themeCandor: ThemeCandor = {
+export const themeBase: ThemeBase = {
   initialColorModeName: "light",
   breakpoints,
   borders,
@@ -399,4 +399,4 @@ export const themeCandor: ThemeCandor = {
   alerts,
   messages,
 };
-export default themeCandor;
+export default themeBase;

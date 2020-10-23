@@ -1,7 +1,7 @@
-import { themeCandor } from "@divramod/gatsby-theme-ts-mdx";
+import { themeBase } from "@divramod/gatsby-theme-ts-mdx";
 
 export const themeSite = {
-  ...themeCandor,
+  ...themeBase,
 
   // ==================================================
   // This site's theme overrides
